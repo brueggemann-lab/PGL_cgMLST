@@ -1,4 +1,4 @@
-# Supplmentary Figure 8
+# Supplmentary Figure 7
 ```{r}
 # Load libraries
 library(ggtree)
