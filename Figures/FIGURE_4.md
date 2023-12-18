@@ -1,4 +1,4 @@
-# FIGURE 3
+# FIGURE 4
 ```{r}
 # Import libraries 
 library(tidyverse)
@@ -11,7 +11,7 @@ library(ggplot2)
 library(mclust)
 library(sjmisc)
 ```
-## FIGURE 3a
+## FIGURE 4a
 ```{r}
 # Import LINCodes and create strings of relevant groupings
 lincodes <- read.csv("FINAL_DATA/short_LINcodes_cgST.csv", header=TRUE) %>% na.omit()
@@ -61,7 +61,7 @@ ggtree(tree3, layout="circular", size=0.1, color="grey30")  %<+% subset(lincodes
   geom_cladelabel(node=3201, color='black', label = "0_265_0", offset = 0.00015, barsize = 0.45) + geom_hilight(node = 3201,alpha = .5, fill="#E76BF3") +
   geom_cladelabel(node=3259, color='black', label = "0_310_0", offset = 0.00015, barsize = 0.45) + geom_hilight(node = 3259,alpha = .5, fill="#607d8b") 
 ````
-## Figure 3b
+## Figure 4b
 ```{r}
 # Import tree (from Figure 2A)
 tree3 <- midpoint.root(read.newick("19k_tree.nwk"))
@@ -144,7 +144,7 @@ ad_coph_plot <- ggplot(data=subset(allset4), aes(y=mst3*100, x=log10(value.x))) 
 
 
 ```
-## Figure 3C
+## Figure 4C
 ```{r}
 # Import metadata
 linmeta <- read.csv("lineage_meta.csv", header=TRUE, na.strings=c(""," ","NA"))
@@ -180,7 +180,7 @@ bubl_div <- ggplot(data=(testmergecg_LIN_country_serotype_all)) +
          axis.text.y=element_text(color="black", size=6),axis.title.y = element_text(face="bold", color="black", size=10),
          axis.title.x = element_text(face="bold", color="black", size=10))
 ````
-## Figure 3D
+## Figure 4D
 ```{r}
 # Read in LIN codes
 k5_lin <- read.table("cgMLST_groupings/lincodes_all.list", header=TRUE, sep=",", fill=TRUE) %>% na.omit()
@@ -226,7 +226,7 @@ lin_rare <- ggplot(data=subset(L_data2)) +
          axis.title.y = element_text(face="bold", color="black", size=10),axis.title.x = element_text(face="bold", color="black", size=10),
          legend.position = "none") 
 ```
-## Figure 3E
+## Figure 4E
 ```{r}
 # Import sample data
 metadata_short <- read.csv("FINAL_DATA/temp_summary.csv", header=TRUE, check.names = FALSE)
